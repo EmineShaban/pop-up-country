@@ -1,0 +1,32 @@
+body{
+    position: relative;
+}
+
+img{
+    width: 100%;
+}
+
+.pop-up-country{
+    position: absolute;
+    background-color: white;
+    width: 30%;
+    margin: auto;
+}
+
+.county-img{
+    width: 15%;
+    margin: auto;
+}
+
+.country-name-loc{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pop-up-country h2{
+    text-align: center;
+}
+
+.pop-up-country ul{
+  
+}
