@@ -1,5 +1,5 @@
 let changeCountry = document.getElementById("change-country");
-let country = document.getElementsByClassName("country-img");
+let country = document.getElementsByClassName("country-i");
 let country1 = document.getElementById("country1");
 let country2 = document.getElementById("country2");
 
@@ -11,14 +11,16 @@ changeCountry.addEventListener("click", function (e) {
 
 const buttonPressed = (e) => {
   e.preventDefault();
-  console.log(e.target.parentElement.className);
-  if (e.target.parentElement.className == "country-img") {
+  if (e.target.parentElement.children[0].className == "country-i") {
     for (let index = 0; index < country.length; index++) {
-        console.log(country[index].className = "country-img")
+      country[index].className = "country-i";
+      country[index].parentElement.parentElement.children[1].className = "";
     }
-    e.target.parentElement.className += " border";
+    e.target.parentElement.parentElement.children[1].className = " bold";
+    e.target.parentElement.children[0].className += " border";
   } else {
-    e.target.parentElement.className = "country-img";
+    e.target.parentElement.parentElement.children[1].className = "";
+    e.target.parentElement.children[0].className = "country-i";
   }
 };
 
