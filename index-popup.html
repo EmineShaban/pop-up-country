@@ -196,24 +196,37 @@
 
 
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="./js/ham.js"></script>
-<!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
+    let changeCountry = document.getElementById("change-country");
+let country = document.getElementsByClassName("country-i");
+let country1 = document.getElementById("country1");
+let country2 = document.getElementById("country2");
+
+changeCountry.addEventListener("click", function (e) {
+  e.preventDefault();
+  country1.style.visibility = "hidden";
+  country2.style.visibility = "visible";
+});
+
+const buttonPressed = (e) => {
+  e.preventDefault();
+  if (e.target.parentElement.children[0].className == "country-i") {
+    for (let index = 0; index < country.length; index++) {
+      country[index].className = "country-i";
+      country[index].parentElement.parentElement.children[1].className = "";
+    }
+    e.target.parentElement.parentElement.children[1].className = " bold";
+    e.target.parentElement.children[0].className += " border";
+  } else {
+    e.target.parentElement.parentElement.children[1].className = "";
+    e.target.parentElement.children[0].className = "country-i";
+  }
+};
+
+for (let index = 0; index < country.length; index++) {
+  country[index].addEventListener("click", buttonPressed);
+}
+
 </script>
-<script src="./js/index.js"></script>
-<script src="./js/country-popup.js"></script>
 
 </html>
