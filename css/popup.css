@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .visible {
-    visibility: visible;
-
+  visibility: visible;
 }
 .hidden {
-    visibility: hidden;
-
+  visibility: hidden;
 }
 .pop-up-country {
   position: fixed;
@@ -17,12 +15,12 @@
   background: rgba(0, 0, 0, 0.7);
   visibility: visible;
   z-index: 10;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
 
 .pop-up-country-div {
-  background-color: white;
+  background-color: rgb(246, 245, 245);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,7 +39,7 @@
   width: 25%;
   margin: auto;
   margin-bottom: 25px;
- }
+}
 
 .country-name-location {
   font-weight: 900;
@@ -50,7 +48,6 @@
 
 .pop-up-country h2 {
   text-align: center;
-  
 }
 
 .pop-up-country ul li {
@@ -82,39 +79,67 @@
   margin: auto;
 }
 
-.change-country {
+.change-country-div a {
   color: black;
   text-decoration: underline;
 }
 
-
-
 .pop-up-all-country {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    visibility: hidden;
-    z-index: 10;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-  }
-  
-  .pop-up-all-country-div {
-    background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 50px 35px;
-    width: 20%;
-    border-radius: 12px;
-  }
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  z-index: 10;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
 
+.pop-up-all-country-div {
+  background-color: rgb(246, 245, 245);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 35px;
+  width: 20%;
+  border-radius: 12px;
+}
 
-  .pop-up-all-country h2{
-    text-align: center;
-    font-weight: 400;
-  }
+.pop-up-all-country h2 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.all-countries {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.country {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.country-img {
+  width: 75px;
+  margin: auto;
+}
+
+.all-countries {
+  overflow: auto;
+  height: 490px;
+}
+
+.country p {
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+.border {
+  border: 1px solid black;
+  border-radius: 100%;
+}
