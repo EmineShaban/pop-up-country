@@ -13,6 +13,9 @@ const buttonPressed = (e) => {
   e.preventDefault();
   console.log(e.target.parentElement.className);
   if (e.target.parentElement.className == "country-img") {
+    for (let index = 0; index < country.length; index++) {
+        console.log(country[index].className = "country-img")
+    }
     e.target.parentElement.className += " border";
   } else {
     e.target.parentElement.className = "country-img";

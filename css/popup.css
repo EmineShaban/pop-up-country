@@ -117,29 +117,31 @@
 .all-countries {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
+  grid-column-gap: 7px;
 }
 
 .country {
   text-align: center;
-  margin-bottom: 15px;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
 }
 .country-img {
-  width: 75px;
+  width: 63px;
+  padding: 2px;
   margin: auto;
 }
 
 .all-countries {
   overflow: auto;
-  height: 490px;
+  height: 420px;
 }
 
 .country p {
-  font-size: 18px;
-  margin-top: 7px;
+  font-size: 17px;
+  margin-top: 5px;
 }
 
 .border {
   border: 1px solid black;
-  border-radius: 100%;
+  border-radius: 50%;
 }
